@@ -1,16 +1,10 @@
 :root {
-    --dark-accent: #ffc700;
-    --dark-main: #fff;
-    --dark-background-main: #060803;
-    --dark-background: #222527;
-
-    --light-accent: #4b526a;
-    --light-main: #15141d;
-    --light-background-main: #ffffff;
-    --light-background: #ebebeb;
-    /* --light-background: #ababab; мб такой код*/
+    --theme-accent: #ffc700;
+    --theme-main: #ffffff;
+    --theme-bgd: #222527;
+    --theme-modal-bgt: rgb(239 236 236 / 90%);
+    --theme-btn-text: #060803;
 }
-
 html,
 body {
     height: 100%;
@@ -19,19 +13,40 @@ body {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    /* background-image: url('../img/space.jpg'); */
-    /* background-size: cover; */
-    /* position: relative; */
+}
+.container {
+    max-width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
 }
 
 header {
     padding: 32px 0 72px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
-.container {
-    min-width: 1170px;
-    margin: 0 95px 0 95px;
-    position: relative;
+.about-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 36%;
+}
+
+.social-link {
+    margin-bottom: 26px;
+}
+
+.social-link svg {
+    fill: var(--theme-accent);
 }
 
 .about {
@@ -39,82 +54,316 @@ header {
     width: 100%;
     background-image: url('../img/space.jpg');
     background-size: cover;
+    position: relative;
     overflow: hidden;
+    background-attachment: fixed;
+}
+
+.about-name {
+    color: var(--theme-accent);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 60px;
+    margin-bottom: 24px;
 }
 
 .about-profession {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 16px;
-    color: var(--dark-main);
+    color: var(--theme-main);
 }
-.about-name {
-    color: var(--dark-accent);
-    font-style: italic;
-    font-weight: bold;
-    font-size: 46px;
-    line-height: 60px;
-}
-
-ul {
-    margin: 24px auto;
-    list-style: disc inside;
-    color: var(--dark-accent);
-}
-
-li {
+.about-positions {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-accent);
     margin-bottom: 8px;
+    margin-left: 18px;
+    list-style: disc;
 }
-
-span {
-    color: var(--dark-main);
+.about-positions-text {
+    color: var(--theme-main);
 }
-
-p {
-    height: 48px;
-    color: var(--dark-main);
-}
-
-button {
+.about-button {
     border: 0;
     outline: 0;
-    padding: 16px 32px;
-    background: var(--dark-accent);
-    color: var(--dark-background-main);
+    margin-top: 40px;
+    padding: 16px 32px 16px 32px;
+    background: var(--theme-accent);
     border-radius: 38px;
-    margin-bottom: 104px;
     cursor: pointer;
+    color: var(--theme-btn-text);
 }
+.about-description {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-main);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-content-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
 .darth-vader-img {
     position: absolute;
     right: 0;
     bottom: 0;
 }
-.quotes {
-    margin: 0 95px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    position: relative;
-}
+
 .death-star-img {
     position: absolute;
     left: 0;
     right: 0;
+    bottom: 0;
     margin: auto;
     bottom: -96px;
     opacity: 0.4;
 }
 
-.bg-darker-strip {
-    background-color: var(--dark-background);
-    padding: 45px 95px;
+.achivements {
+    padding: 60px 0;
+    background-color: var(--theme-bgd);
 }
 
-/* .font-main {
-    width: 400px;
-    height: 24px;
-    font-style: normal;
-    size: 16px;
-} */
+.achivements-header {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-accent);
+    margin-bottom: 64px;
+}
+
+.achivements-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.achivements-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.achivements-item-header {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-accent);
+    margin: 38px 0 4px 0;
+}
+
+.achivements-item-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-main);
+}
+
+.achivements-item {
+    width: 25%;
+}
+
+.codex {
+    padding: 186px 0;
+    background-image: url('../img/space.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.codex .container {
+    flex-direction: row;
+}
+
+.codex-motto {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 60px;
+    color: var(--theme-accent);
+}
+
+.codex-left-side,
+.codex-right-side {
+    width: 50%;
+}
+.codex-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-accent);
+    margin-bottom: 32px;
+}
+
+.codex-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-main);
+    margin-bottom: 4px;
+}
+
+.codex-text--last {
+    margin-bottom: 60px;
+}
+
+.footer {
+    padding: 60px 0 60px 0;
+    background-color: var(--theme-bgd);
+}
+
+.footer .container {
+    align-items: center;
+}
+
+.footer-title {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-main);
+    text-align: center;
+    margin-bottom: 54px;
+    width: 740px;
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--theme-modal-bgt);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-form {
+    padding: 40px 80px;
+    background-color: var(--theme-bgd);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.modal-form-title {
+    color: var(--theme-accent);
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.modal-form-text {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: var(--theme-main);
+    margin-bottom: 32px;
+}
+
+.modal-form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.modal-form-field-label {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 4px;
+    color: var(--theme-main);
+}
+
+.modal-form-name,
+.modal-form-emeil {
+    width: 440px;
+    height: 40px;
+    border: 1px solid var(--theme-main);
+    outline: none;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.modal-form-submit {
+    border: 0;
+    outline: 0;
+    padding: 16px 32px 16px 32px;
+    background: var(--theme-accent);
+    border-radius: 38px;
+    cursor: pointer;
+    margin-top: 16px;
+    color: var(--theme-btn-text);
+}
+
+.modal-active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-success {
+    padding: 80px 40px 88px 40px;
+    background-color: var(--theme-bgd);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+
+.modal-success-title {
+    color: var(--theme-accent);
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 112px;
+    text-align: center;
+}
+
+.modal-success-text {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: var(--theme-main);
+    margin-bottom: 36px;
+}
+
+.about--light,
+.codex--light {
+    background-image: url('../img/stardust.jpg');
+}
+
+.logo svg,
+.achivements-icon svg,
+footer svg,
+.modal-success-icon svg {
+    fill: var(--theme-accent);
+}
+
+.close-icon svg {
+    fill: var(--theme-main);
+}
