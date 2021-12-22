@@ -1,0 +1,120 @@
+:root {
+    --dark-accent: #ffc700;
+    --dark-main: #fff;
+    --dark-background-main: #060803;
+    --dark-background: #222527;
+
+    --light-accent: #4b526a;
+    --light-main: #15141d;
+    --light-background-main: #ffffff;
+    --light-background: #ebebeb;
+    /* --light-background: #ababab; мб такой код*/
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* background-image: url('../img/space.jpg'); */
+    /* background-size: cover; */
+    /* position: relative; */
+}
+
+header {
+    padding: 32px 0 72px 0;
+}
+
+.container {
+    min-width: 1170px;
+    margin: 0 95px 0 95px;
+    position: relative;
+}
+
+.about {
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/space.jpg');
+    background-size: cover;
+    overflow: hidden;
+}
+
+.about-profession {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    color: var(--dark-main);
+}
+.about-name {
+    color: var(--dark-accent);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 60px;
+}
+
+ul {
+    margin: 24px auto;
+    list-style: disc inside;
+    color: var(--dark-accent);
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+span {
+    color: var(--dark-main);
+}
+
+p {
+    height: 48px;
+    color: var(--dark-main);
+}
+
+button {
+    border: 0;
+    outline: 0;
+    padding: 16px 32px;
+    background: var(--dark-accent);
+    color: var(--dark-background-main);
+    border-radius: 38px;
+    margin-bottom: 104px;
+    cursor: pointer;
+}
+.darth-vader-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.quotes {
+    margin: 0 95px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+.death-star-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -96px;
+    opacity: 0.4;
+}
+
+.bg-darker-strip {
+    background-color: var(--dark-background);
+    padding: 45px 95px;
+}
+
+/* .font-main {
+    width: 400px;
+    height: 24px;
+    font-style: normal;
+    size: 16px;
+} */
