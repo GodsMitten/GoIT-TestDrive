@@ -2,9 +2,9 @@
     --theme-accent: #ffc700;
     --theme-main: #ffffff;
     --theme-bgd: #222527;
-
-    --theme-modal-bgd: rgb(239 236 236 / 90%);
+    --theme-modal-bgd: rgb(239, 236, 236, 40%);
     --theme-btn-text: #060803;
+    --theme-abt-dscr-bug: #fff;
 }
 
 html,
@@ -15,6 +15,10 @@ body {
 
 body {
     font-family: 'Montserrat', sans-serif;
+}
+
+.body-fixed {
+    overflow: hidden;
 }
 
 .container {
@@ -29,7 +33,7 @@ body {
 }
 
 header {
-    padding: 32px 0 32px 0;
+    padding: 32px 0 72px 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -51,10 +55,11 @@ header {
 .social-link svg {
     fill: var(--theme-accent);
 }
+
 .about {
     height: 100%;
     width: 100%;
-    background-image: url('../img/space.jpg');
+    background-image: url('../img/img/space.jpg');
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -71,18 +76,17 @@ header {
 }
 
 .about-profession {
+    color: var(--theme-main);
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 16px;
-    color: var(--theme-main);
 }
 
 .about-positions {
+    color: var(--theme-accent);
     font-size: 16px;
     line-height: 24px;
-    color: var(--theme-accent);
     margin-bottom: 8px;
-    margin-left: 18px;
     list-style: disc;
 }
 
@@ -93,18 +97,18 @@ header {
 .about-button {
     border: 0;
     outline: 0;
-    margin-top: 40px;
+    margin-top: 24px;
     padding: 16px 32px 16px 32px;
-    background-color: var(--theme-accent);
+    background: var(--theme-accent);
     border-radius: 38px;
     cursor: pointer;
     color: var(--theme-btn-text);
 }
 
 .about-description {
+    color: var(--theme-main);
     font-size: 16px;
     line-height: 24px;
-    color: var(--theme-main);
 }
 
 .about-content {
@@ -122,10 +126,14 @@ header {
     margin-bottom: 60px;
 }
 
+.about-description-bug {
+    color: var(--theme-abt-dscr-bug);
+}
+
 .darth-vader-img {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 0px;
+    bottom: 0px;
 }
 
 .death-star-img {
@@ -135,55 +143,55 @@ header {
     bottom: 0;
     margin: auto;
     bottom: -96px;
-    opacity: 0.4;
+    opacity: 40%;
 }
 
-.achivements {
-    padding: 60px 0;
+.achievements {
+    padding: 60px;
     background-color: var(--theme-bgd);
 }
 
-.achivements-header {
+.achievements-header {
     font-weight: bold;
     font-size: 16px;
     line-height: 24px;
     color: var(--theme-accent);
-    margin-bottom: 64px;
+    margin-bottom: 60px;
 }
 
-.achivements-icon {
+.achievents-icon {
     width: 60px;
     height: 60px;
 }
 
-.achivements-items {
+.achievements-items {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
 }
 
-.achivements-item-header {
-    font-weight: normal;
+.achievements-item-header {
+    font-weight: bold;
     font-size: 16px;
     line-height: 24px;
     color: var(--theme-accent);
-    margin: 38px 0 4px 0;
+    margin: 32px 0 4px 0;
 }
 
-.achivements-item-text {
+.achievements-item-text {
     font-size: 16px;
     line-height: 24px;
     color: var(--theme-main);
 }
 
-.achivements-item {
+.achievements-item {
     width: 25%;
 }
 
 .codex {
     padding: 186px 0;
-    background-image: url(../img/space.jpg);
+    background-image: url(../img/img/space.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -197,6 +205,7 @@ header {
     font-weight: bold;
     font-size: 46px;
     line-height: 60px;
+    letter-spacing: 0.02em;
     color: var(--theme-accent);
 }
 
@@ -225,21 +234,21 @@ header {
 }
 
 .footer {
-    padding: 60px 0 66px 0;
+    padding: 60px 0 60px 0;
     background-color: var(--theme-bgd);
-}
-
-.footer .container {
-    align-items: center;
 }
 
 .footer-title {
     font-size: 16px;
     line-height: 24px;
-    color: var(--theme-main);
-    text-align: center;
     width: 740px;
-    margin-bottom: 54px;
+    text-align: center;
+    color: var(--theme-main);
+    margin-bottom: 40px;
+}
+
+.footer .container {
+    align-items: center;
 }
 
 .modal-container {
@@ -268,8 +277,8 @@ header {
 
 .close-icon {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 12px;
+    right: 12px;
     background: none;
     border: none;
     outline: none;
@@ -296,14 +305,15 @@ header {
 .modal-form-field {
     display: flex;
     flex-direction: column;
+    color: var(--theme-main);
     margin-bottom: 16px;
 }
 
-.modal-form-field {
+.modal-form-field-label {
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 4px;
     color: var(--theme-main);
+    margin-bottom: 4px;
 }
 
 .modal-form-name,
@@ -317,10 +327,10 @@ header {
 }
 
 .modal-form-submit {
-    border: 0;
+    bottom: 0;
     outline: 0;
     padding: 16px 32px 16px 32px;
-    background-color: var(--theme-accent);
+    background: var(--theme-accent);
     border-radius: 38px;
     cursor: pointer;
     margin-top: 16px;
@@ -356,16 +366,16 @@ header {
     line-height: 24px;
     text-align: center;
     color: var(--theme-main);
-    margin-bottom: 36px;
+    margin-bottom: 32px;
 }
 
 .about--light,
 .codex--light {
-    background-image: url('../img/stardust.jpg');
+    background-image: url('../img/img/stardust.jpg');
 }
 
 .logo svg,
-.achivements-icon svg,
+.achievents-icon svg,
 .footer svg,
 .modal-success-icon svg {
     fill: var(--theme-accent);
