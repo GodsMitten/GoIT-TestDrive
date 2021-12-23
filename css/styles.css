@@ -59,7 +59,7 @@ header {
 .about {
     height: 100%;
     width: 100%;
-    background-image: url('../img/img/space.jpg');
+    background-image: url('../img/space.jpg');
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -191,7 +191,7 @@ header {
 
 .codex {
     padding: 186px 0;
-    background-image: url(../img/img/space.jpg);
+    background-image: url(../img/space.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -371,7 +371,7 @@ header {
 
 .about--light,
 .codex--light {
-    background-image: url('../img/img/stardust.jpg');
+    background-image: url('../img/stardust.jpg');
 }
 
 .logo svg,
