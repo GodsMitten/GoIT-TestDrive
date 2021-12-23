@@ -2,42 +2,39 @@
     --theme-accent: #ffc700;
     --theme-main: #ffffff;
     --theme-bgd: #222527;
+
     --theme-modal-bgd: rgb(239 236 236 / 90%);
     --theme-btn-text: #060803;
-    /* --theme-modal-bgd: #e5e5e5; */
-    /* --theme-modal-bgd: rgba(255, 255, 255, 0.4); */
 }
 
 html,
 body {
     height: 100%;
     width: 100%;
+}
+
+body {
     font-family: 'Montserrat', sans-serif;
 }
 
 .container {
-    position: relative;
     max-width: 1170px;
+    height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    height: 100%;
+    position: relative;
 }
+
 header {
-    padding: 32px 0 72px 0;
+    padding: 32px 0 32px 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.logo {
-    transition: transform 250ms linear;
-}
-.logo:hover {
-    transform: scale(1.25);
-}
-/* ==========ABOUT=========*/
+
 .about-social {
     display: flex;
     flex-direction: column;
@@ -46,53 +43,31 @@ header {
     right: 0;
     top: 36%;
 }
+
 .social-link {
     margin-bottom: 26px;
 }
+
 .social-link svg {
     fill: var(--theme-accent);
-    transition: transform 250ms linear;
 }
-.social-link svg:hover {
-    transform: scale(1.25);
-}
-
 .about {
-    position: relative;
     height: 100%;
     width: 100%;
     background-image: url('../img/space.jpg');
     background-size: cover;
+    position: relative;
     overflow: hidden;
     background-attachment: fixed;
 }
+
 .about-name {
+    color: var(--theme-accent);
     font-style: italic;
     font-weight: bold;
     font-size: 46px;
     line-height: 60px;
     margin-bottom: 24px;
-    color: var(--theme-accent);
-    animation-name: changeShadow;
-    animation-duration: 3000ms;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-@keyframes changeShadow {
-    0% {
-        text-shadow: none;
-        box-shadow: var(--theme-accent);
-    }
-    50% {
-        text-shadow: 5px 2px 5px rgba(150, 150, 150, 1);
-        box-shadow: none;
-    }
-    100% {
-        text-shadow: none;
-        box-shadow: var(--theme-accent);
-    }
 }
 
 .about-profession {
@@ -101,115 +76,122 @@ header {
     margin-bottom: 16px;
     color: var(--theme-main);
 }
+
 .about-positions {
     font-size: 16px;
     line-height: 24px;
+    color: var(--theme-accent);
     margin-bottom: 8px;
     margin-left: 18px;
     list-style: disc;
-    color: var(--theme-accent);
 }
+
 .about-positions-text {
     color: var(--theme-main);
 }
+
 .about-button {
     border: 0;
     outline: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    line-height: 24px;
+    margin-top: 40px;
     padding: 16px 32px 16px 32px;
-    color: var(--theme-btn-text);
     background-color: var(--theme-accent);
     border-radius: 38px;
     cursor: pointer;
-    margin-top: 40px;
-    transition: transform 250ms linear;
+    color: var(--theme-btn-text);
 }
-.about-button:hover {
-    transform: scale(1.05);
-}
+
 .about-description {
     font-size: 16px;
     line-height: 24px;
     color: var(--theme-main);
 }
+
 .about-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+
 .about-content-row {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    justify-content: space-between;
     width: 100%;
+    justify-content: space-between;
     margin-bottom: 60px;
 }
+
 .darth-vader-img {
     position: absolute;
     right: 0;
     bottom: 0;
 }
+
 .death-star-img {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -96px;
+    bottom: 0;
     margin: auto;
+    bottom: -96px;
     opacity: 0.4;
 }
-/* ==========ACHIEVEMENTS=========*/
-.achievements {
+
+.achivements {
     padding: 60px 0;
     background-color: var(--theme-bgd);
 }
-.achievements-header {
+
+.achivements-header {
     font-weight: bold;
     font-size: 16px;
     line-height: 24px;
     color: var(--theme-accent);
     margin-bottom: 64px;
 }
-.achievements-items {
+
+.achivements-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.achivements-items {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
 }
-.achievements-item {
-    width: 25%;
-}
-.achievements-icon {
-    width: 60px;
-    height: 60px;
-}
-.achievements-item-header {
+
+.achivements-item-header {
+    font-weight: normal;
     font-size: 16px;
     line-height: 24px;
     color: var(--theme-accent);
-    margin-top: 38px;
-    margin-bottom: 4px;
+    margin: 38px 0 4px 0;
 }
-.achievements-item-text {
+
+.achivements-item-text {
     font-size: 16px;
     line-height: 24px;
     color: var(--theme-main);
 }
-/* =============CODEX===============*/
+
+.achivements-item {
+    width: 25%;
+}
+
 .codex {
     padding: 186px 0;
-    background-image: url('../img/space.jpg');
+    background-image: url(../img/space.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
+
 .codex .container {
     flex-direction: row;
 }
-.codex-left-side {
-    width: 50%;
-}
+
 .codex-motto {
     font-style: italic;
     font-weight: bold;
@@ -217,6 +199,8 @@ header {
     line-height: 60px;
     color: var(--theme-accent);
 }
+
+.codex-left-side,
 .codex-right-side {
     width: 50%;
 }
@@ -228,16 +212,18 @@ header {
     color: var(--theme-accent);
     margin-bottom: 32px;
 }
+
 .codex-text {
     font-size: 16px;
     line-height: 24px;
     color: var(--theme-main);
     margin-bottom: 4px;
 }
+
 .codex-text--last {
     margin-bottom: 60px;
 }
-/* =============FOOTER===============*/
+
 .footer {
     padding: 60px 0 66px 0;
     background-color: var(--theme-bgd);
@@ -246,15 +232,16 @@ header {
 .footer .container {
     align-items: center;
 }
+
 .footer-title {
     font-size: 16px;
     line-height: 24px;
     color: var(--theme-main);
     text-align: center;
+    width: 740px;
     margin-bottom: 54px;
 }
 
-/* ===========MODAL FORM============ */
 .modal-container {
     position: fixed;
     top: 0;
@@ -269,6 +256,7 @@ header {
     pointer-events: none;
     transition: opacity 0.3s ease-in-out;
 }
+
 .modal-form {
     padding: 40px 80px;
     background-color: var(--theme-bgd);
@@ -277,6 +265,7 @@ header {
     flex-direction: column;
     align-items: center;
 }
+
 .close-icon {
     position: absolute;
     top: 16px;
@@ -285,11 +274,8 @@ header {
     border: none;
     outline: none;
     cursor: pointer;
-    fill: var(--theme-main);
 }
-.close-icon:hover {
-    fill: var(--theme-accent);
-}
+
 .modal-form-title {
     font-weight: bold;
     font-size: 16px;
@@ -298,6 +284,7 @@ header {
     margin-bottom: 4px;
     text-align: center;
 }
+
 .modal-form-text {
     font-size: 16px;
     line-height: 24px;
@@ -305,60 +292,56 @@ header {
     color: var(--theme-main);
     margin-bottom: 32px;
 }
+
 .modal-form-field {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
 }
-.modal-form-field-label {
+
+.modal-form-field {
     font-size: 16px;
     line-height: 24px;
-    color: var(--theme-main);
     margin-bottom: 4px;
+    color: var(--theme-main);
 }
+
 .modal-form-name,
 .modal-form-email {
     width: 440px;
     height: 40px;
     border: 1px solid var(--theme-main);
-    color: var(--theme-main);
-    background-color: transparent;
-    outline: 0;
+    outline: none;
     padding: 4px;
     box-sizing: border-box;
 }
+
 .modal-form-submit {
     border: 0;
     outline: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    line-height: 24px;
     padding: 16px 32px 16px 32px;
-    color: var(--theme-btn-text);
     background-color: var(--theme-accent);
     border-radius: 38px;
     cursor: pointer;
     margin-top: 16px;
-    transition: transform 250ms linear;
-}
-.modal-form-submit:hover {
-    transform: scale(1.05);
+    color: var(--theme-btn-text);
 }
 
 .modal-active {
     opacity: 1;
     pointer-events: all;
 }
-/* ===========MODAL SUCCESS============ */
+
 .modal-success {
-    width: 600px;
     padding: 80px 40px 88px 40px;
     background-color: var(--theme-bgd);
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 600px;
 }
+
 .modal-success-title {
     font-weight: bold;
     font-size: 16px;
@@ -367,22 +350,27 @@ header {
     margin-bottom: 112px;
     text-align: center;
 }
+
 .modal-success-text {
     font-size: 16px;
     line-height: 24px;
     text-align: center;
     color: var(--theme-main);
-    margin-bottom: 32px;
-}
-
-.logo svg,
-.achievements-icon svg,
-.footer svg,
-.modal-success-icon svg {
-    fill: var(--theme-accent);
+    margin-bottom: 36px;
 }
 
 .about--light,
 .codex--light {
     background-image: url('../img/stardust.jpg');
+}
+
+.logo svg,
+.achivements-icon svg,
+.footer svg,
+.modal-success-icon svg {
+    fill: var(--theme-accent);
+}
+
+.close-icon svg {
+    fill: var(--theme-main);
 }

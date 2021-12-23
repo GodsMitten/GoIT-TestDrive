@@ -1,45 +1,46 @@
-const MODAL_ACTIVE_CLASS = "modal-active";
+const MODAL_ACTIVE_CLASS = 'modal-active';
 
-const callFormBtn = document.querySelector("#call-form-btn");
+const callFormBtn = document.querySelector('#call-form-btn');
 
-const modalForm = document.querySelector("#modal-form");
-const modalSuccess = document.querySelector("#modal-success");
+const modalForm = document.querySelector('#modal-form');
+const modalSuccess = document.querySelector('#modal-success');
 
-const form = document.querySelector("#modal-form form");
+const form = document.querySelector('#modal-form form');
 
 function closeModals(e) {
-  e.preventDefault();
+    e.preventDefault();
 
-  modalForm.classList.remove(MODAL_ACTIVE_CLASS);
-  modalSuccess.classList.remove(MODAL_ACTIVE_CLASS);
+    modalForm.classList.remove(MODAL_ACTIVE_CLASS);
+    modalSuccess.classList.remove(MODAL_ACTIVE_CLASS);
 }
 
 function openSuccessModal() {
-  modalForm.classList.remove(MODAL_ACTIVE_CLASS);
-  modalSuccess.classList.add(MODAL_ACTIVE_CLASS);
+    modalForm.classList.remove(MODAL_ACTIVE_CLASS);
+    modalSuccess.classList.add(MODAL_ACTIVE_CLASS);
 
-  const modalFormClose = document.querySelector("#modal-success-close");
-  modalFormClose.addEventListener("click", closeModals);
-}
+    const modalFormClose = document.querySelector('#modal-success-close');
+    modalFormClose.addEventListener('click', closeModals);
+};
+
 
 function sendUserInfo(e) {
-  e.preventDefault();
+  e.preventDefault()
   const formData = new FormData(form);
 
-  //   openSuccessModal();
 
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  }).then(openSuccessModal);
-}
+ fetch('/', {
+ method: 'POST',
+ headers: { "Content-Type": "application/x-www-form-urlencoded" },
+body: new URLSearchParams(formData).toString()
+}).then(openSuccessModal);
+ }
 
-callFormBtn.addEventListener("click", function () {
-  modalForm.classList.add(MODAL_ACTIVE_CLASS);
 
-  const modalFormClose = document.querySelector("#modal-form-close");
-  modalFormClose.addEventListener("click", closeModals);
+callFormBtn.addEventListener('click', function () {
+    modalForm.classList.add(MODAL_ACTIVE_CLASS);
 
-  form.addEventListener("submit", sendUserInfo);
+    const modalFormClose = document.querySelector('#modal-form-close');
+    modalFormClose.addEventListener('click', closeModals);
+
+    form.addEventListener('submit', sendUserInfo);
 });
